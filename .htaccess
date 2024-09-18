@@ -1,0 +1,12 @@
+
+
+
+RewriteEngine On
+#For remove all php file extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+RewriteRule ^index/([0-9]+) index.php?page=%1 [NC,L]
+
+RewriteRule ^login/([0-9]+)/([0-9a-zA-Z_-]+) login.php?page=%1&title=$2 [NC,L]

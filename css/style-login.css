@@ -1,0 +1,297 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@100;300;400;700&display=swap);
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #30475e;
+  color: white;
+  padding: 20px 0;
+}
+
+header nav a{
+  color: white;
+  margin-right: 30px;
+  font-weight: 500;
+}
+
+header div.sign-in-up button{
+  background-color: #75cfb8;
+  font-size: 16px;
+  font-weight: 550;
+  padding: 4px 12px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  outline: none;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+header div.sign-in-up button:last-child{
+  background-color: #fa9579;
+}
+
+div.popup-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+div.popup-container div.popup{
+  background-color: #f0f0f0;
+  width: 350px;
+  border-radius: 5px;
+  padding: 20px 25px 30px 25px;
+}
+
+div.popup-container div.popup h2{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  color: #30475e;
+}
+
+div.popup-container div.popup h2 button{
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 18px;
+  font-weight: 550;
+  color: #797775;
+}
+
+div.popup-container div.popup input, div.popup-container div.popup select{
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #30475e;
+  border-radius: 0;
+  padding: 5px 0;
+  font-weight: 550;
+  font-size: 14px;
+  outline: none;
+}
+div.popup-container div.popup button.login-btn,
+div.popup-container div.register button.register-btn, 
+div.popup-container div.forgot button.reset-btn,
+div.popup-container div.reset button.reset-link{
+  font-weight: 550;
+  font-style: 15px;
+  color: white;
+  background-color: #30475e;
+  padding: 4px 10px;
+  border: none;
+  outline: none;
+  margin-top: 5px;
+}
+
+div#reset-pw-popup{
+  display: flex;
+}
+
+
+div.popup-container div.popup div.forgot-btn {
+  text-align: right;
+}
+
+div.popup-container div.popup div.forgot-btn button{
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-weight: 450;
+  cursor: pointer;
+}
+
+div.popup-container div.register{
+  background-color: #edeef7;
+}
+
+div.popup-container div.register h2, div.popup-container div.forgot h2{
+  color: #fa9579;
+}
+
+div.popup-container div.register input, div.popup-container div.register select, div.popup-container div.forgot input{
+  border-bottom-color: #fa9579;
+}
+
+div.popup-container div.register button.register-btn, div.popup-container div.forgot button.reset-btn{
+  background-color: #fa9579;
+}
+
+div.user{
+  color: #30475e;
+  background-color: #75cfb8;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+div.user a{
+  color: #30475e;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*ackground-image: url(img/laut-bercerita.jpg);
+    background-position: center;
+    overflow: hidden;
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;*/
+}
+
+.home-content {
+    flex: 1;
+}
+
+.home-content h3 {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 700;
+    /*text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);*/
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+.home-img {
+    flex: 1;
+}
+
+.home-img img {
+    width: 250px;
+    float: right;
+    /*box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);*/
+}
+
+.about-content h2{
+    margin-bottom: 10px;
+}
+
+.about-content span{
+    margin-top: 100px;
+}
+
+.nav-menu-btn{
+    z-index: 10001;
+    display: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    backdrop-filter: blur(10px);
+}
+
+.sidebar a {
+    width: 100%;
+    color: black;
+    padding: 10px;
+    margin-top: 13px;
+}
+
+.nav-menu .link{
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 15px;
+    margin: 0 25px;
+}
+.link:hover, .active{
+    border-bottom: 2px solid #fff;
+}
+
+@media only screen and (max-width: 1280px){
+    header {
+        padding: 14px 2%;
+        transition: .2s;
+    }
+}
+
+@media only screen and (max-width: 786px){
+    .nav-menu.responsive{
+        top: 0;
+    }
+    .nav-menu{
+        position: absolute;
+        top: -800px;
+        display: flex;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.2);
+        width: 100%;
+        height: 90vh;
+        backdrop-filter: blur(20px);
+        transition: .3s;
+    }
+    .nav-menu a{
+        flex-direction: column;
+        text-align: center;
+        padding-top: 25px;
+        transition: transform 750ms;
+    will-change: transform;
+    }
+
+    .nav-menu-btn{
+        display: block;
+    }
+
+    .link:hover,
+    .link:focus{
+      transform: translateY(-10px);
+      transition: transform 250ms;
+    }
+
+  .nav-menu-btn i{
+        font-size: 25px;
+        color: #fff;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: .3s;
+    }
+    .nav-menu-btn i:hover{
+        background: rgba(255, 255, 255, 0.15);
+    }
+}
